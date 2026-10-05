@@ -11,7 +11,9 @@ from interop_trace.adapters.cli.commands import process
 
 # The Typer app is the command registry. Add new commands by importing their
 # modules and registering them below.
-app = typer.Typer(help="Tracing interoperability across bioinformatics databases and workflows.")
+app = typer.Typer(
+    help="Tracing interoperability across bioinformatics databases and workflows."
+)
 app.command(name="process")(process.command)
 
 

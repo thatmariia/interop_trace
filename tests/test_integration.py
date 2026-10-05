@@ -21,5 +21,3 @@ def test_cli_application_processes_a_command():
 
     assert result.exit_code == 0
     assert result.stdout.strip() == "ABC"
-
-
