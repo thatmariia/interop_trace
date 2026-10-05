@@ -1,0 +1,18 @@
+cff-version: "1.2.0"
+message: "If you use this software, please cite it using the metadata in this file."
+title: "Interop Trace"
+type: software
+version: "0.1.0"
+abstract: "A research software project for empirically testing interoperability across bioinformatics databases and workflows. It runs controlled database\u2013workflow configurations against reference benchmarks, traces where interoperability succeeds or breaks, and produces evidence about the causes of incompatibility."
+repository-code: "https://github.com/thatmariia/interop_trace"
+url: "https://thatmariia.github.io/interop_trace/"
+authors:
+  - family-names: "Steeghs-Turchina"
+    given-names: "Mariia"
+    affiliation: "Leiden University Medical Center"
+    email: "m.a.steeghs-turchina@lumc.nl"
+    orcid: "https://orcid.org/0000-0002-0852-4752"
+keywords:
+  - "interoperability"
+  - "workflow"
+  - "benchmarking"

@@ -1,0 +1,35 @@
+[project]
+site_name = "Interop Trace"
+site_description = "Tracing interoperability across bioinformatics databases and workflows."
+docs_dir = "docs"
+copyright = "Copyright Interop Trace contributors."
+site_url = "https://thatmariia.github.io/interop_trace/"
+repo_url = "https://github.com/thatmariia/interop_trace"
+repo_name = "interop_trace"
+
+[project.theme]
+features = [
+  # Group top-level pages as sections in the left navigation.
+  "navigation.sections",
+  # Add a back-to-top button on long documentation pages.
+  "navigation.top",
+  # Link each page to its source and editing view in the repository.
+  "content.action.edit",
+  "content.action.view",
+]
+
+[project.markdown_extensions]
+# Render note, warning, tip, and similar callout blocks.
+admonition = {}
+# Add stable links to each generated heading.
+toc.permalink = true
+# Support collapsible admonitions with ??? syntax.
+"pymdownx.details" = {}
+# Improve fenced code blocks, especially inside admonitions.
+"pymdownx.superfences" = {}
+
+# Generate the technical reference from public NumPy-style Python docstrings.
+[project.plugins.mkdocstrings.handlers.python]
+paths = ["src"]
+options.docstring_style = "numpy"
+options.show_source = true
