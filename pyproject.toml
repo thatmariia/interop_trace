@@ -10,17 +10,23 @@ readme = "README.md"
 requires-python = ">=3.12"
 license-files = ["LICENSE"]
 authors = [
-  { name = "Mariia Steeghs-Turchina", email = "m.a.steeghs-turchina@lumc.nl" }]
+  { name = "Mariia Steeghs-Turchina", email = "m.a.steeghs-turchina@lumc.nl" },
+]
 dependencies = ["typer"]
 keywords = ["interoperability", "workflow", "benchmarking"]
-classifiers = ["Programming Language :: Python :: 3", "Operating System :: OS Independent"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+]
 
 [project.optional-dependencies]
 test = ["pytest"]
 quality = ["pre-commit", "ruff", "mypy"]
 docs = ["zensical", "mkdocstrings[python]"]
+
 [project.scripts]
 "interop-trace" = "interop_trace.adapters.cli.app:main"
+
 [project.urls]
 "Source Code" = "https://github.com/thatmariia/interop_trace"
 Documentation = "https://thatmariia.github.io/interop_trace/"
@@ -33,14 +39,7 @@ testpaths = ["tests"]
 line-length = 88
 
 [tool.ruff.lint]
-select = [
-  "B",
-  "E",
-  "F",
-  "I",
-  "SIM",
-  "UP",
-]
+select = ["B", "E", "F", "I", "SIM", "UP"]
 
 [tool.ruff.format]
 quote-style = "double"
@@ -50,8 +49,5 @@ strict = true
 warn_unused_configs = true
 
 [[tool.mypy.overrides]]
-module = [
-  "fastapi.*",
-  "typer.*",
-]
+module = ["fastapi.*", "typer.*"]
 ignore_missing_imports = true
