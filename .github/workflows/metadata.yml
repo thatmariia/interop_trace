@@ -18,4 +18,4 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
-      - uses: LUMC-DCC/rs-metadata@bf5d33849d673c474b6a75d597665f04d25db200 # v1
+      - uses: LUMC-DCC/rs-metadata@v1
