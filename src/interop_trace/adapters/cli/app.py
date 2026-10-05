@@ -14,6 +14,13 @@ from interop_trace.adapters.cli.commands import process
 app = typer.Typer(
     help="Tracing interoperability across bioinformatics databases and workflows."
 )
+
+
+@app.callback()
+def callback() -> None:
+    """Provide the parent command for the CLI subcommands."""
+
+
 app.command(name="process")(process.command)
 
 
